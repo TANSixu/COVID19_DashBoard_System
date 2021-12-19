@@ -33,7 +33,7 @@ public class DataGet {
 
     }
 
-    public static String country_data_get(Country country, Date date) throws ParseException {
+    public static String countryDataGet(Country country, Date date) throws ParseException {
         // 从数据库中找到这个country所有信息
         Calendar calendar = new GregorianCalendar();
         calendar.setTime(date);
@@ -74,7 +74,7 @@ public class DataGet {
         return data;
     }
 
-    public static String dynamicData_get(ArrayList<InfoPiece> records) {
+    public static String dynamicDataGet(ArrayList<InfoPiece> records) {
         // 数据库中找到十个最多case的国家，把这些国家的所有info放到records
         String data = "";
 
@@ -97,7 +97,7 @@ public class DataGet {
         return data;
     }
 
-    public static String map_data_get(CountryCase[] country_cases) {
+    public static String mapDataGet(CountryCase[] country_cases) {
         Gson gson = new Gson();
         String data = "";
         for (int i = 0; i < country_cases.length; i++) {
@@ -107,7 +107,7 @@ public class DataGet {
         return data;
     }
 
-    public static String table_data_get(ArrayList<InfoPiece> records) {
+    public static String tableDataGet(ArrayList<InfoPiece> records) {
         //从数据库把所有的info 全部选出
         for (int i = 0; i < records.size(); i++) {
             records.get(i).Continent = null;

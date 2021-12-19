@@ -32,8 +32,8 @@ public class test {
         }
         CountryCase[] country_cases = new CountryCase[pieces.size()];
         TestFileRead.get_country_cases(pieces).toArray(country_cases);
-        System.out.println(DataGet.map_data_get(country_cases));
-        return DataGet.map_data_get(country_cases);
+        System.out.println(DataGet.mapDataGet(country_cases));
+        return DataGet.mapDataGet(country_cases);
     }
     public static String test_Country(ArrayList<InfoPiece> records,String CountryName,Date date) throws ParseException {
        ArrayList<InfoPiece> pieces = new ArrayList<>();
@@ -44,13 +44,13 @@ public class test {
         }
 
         Country country = TestFileRead.get_Country(pieces);
-        System.out.println(DataGet.country_data_get(country,date));
-        return DataGet.country_data_get(country,date);
+        System.out.println(DataGet.countryDataGet(country,date));
+        return DataGet.countryDataGet(country,date);
     }
     public static String test_dynamicData(ArrayList<InfoPiece> records){
         ArrayList<InfoPiece> pieces = TestFileRead.get_top10_records(records);
-        System.out.println(DataGet.dynamicData_get(pieces));
-        return DataGet.dynamicData_get(pieces);
+        System.out.println(DataGet.dynamicDataGet(pieces));
+        return DataGet.dynamicDataGet(pieces);
      }
     public static String test_continent( ArrayList<InfoPiece> records){
         // test continent
@@ -95,7 +95,7 @@ public class test {
                 return a.compareTo(b)*Order;
             }
         });
-        System.out.println(DataGet.table_data_get(pieces));
-        return DataGet.table_data_get(pieces);
+        System.out.println(DataGet.tableDataGet(pieces));
+        return DataGet.tableDataGet(pieces);
     }
 }
