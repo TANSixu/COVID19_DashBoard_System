@@ -8,7 +8,7 @@ public final class Config {
 
     static {
         try {
-            properties.load(new FileInputStream("./src//main/java/config.properties"));
+            properties.load(new FileInputStream("./src//main/resources/config.properties"));
         } catch (Exception e) {
             e.printStackTrace();
         }

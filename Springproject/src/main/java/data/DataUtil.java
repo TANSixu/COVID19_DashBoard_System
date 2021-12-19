@@ -35,8 +35,8 @@ public class DataUtil {
         }
         CountryCase[] country_cases = new CountryCase[pieces.size()];
         DataReadEncapsulation.getCountryCases(pieces).toArray(country_cases);
-        System.out.println(DataGet.mapDataGet(country_cases));
-        return DataGet.mapDataGet(country_cases);
+        System.out.println(DataToJson.mapDataGet(country_cases));
+        return DataToJson.mapDataGet(country_cases);
     }
     public static String lineChartData(ArrayList<InfoPiece> records, String CountryName, Date date) throws ParseException {
        ArrayList<InfoPiece> pieces = new ArrayList<>();
@@ -47,13 +47,13 @@ public class DataUtil {
         }
 
         Country country = DataReadEncapsulation.getCountry(pieces);
-        System.out.println(DataGet.countryDataGet(country,date));
-        return DataGet.countryDataGet(country,date);
+        System.out.println(DataToJson.countryDataGet(country,date));
+        return DataToJson.countryDataGet(country,date);
     }
     public static String animaData(ArrayList<InfoPiece> records){
         ArrayList<InfoPiece> pieces = DataReadEncapsulation.getTop10Records(records);
-        System.out.println(DataGet.dynamicDataGet(pieces));
-        return DataGet.dynamicDataGet(pieces);
+        System.out.println(DataToJson.dynamicDataGet(pieces));
+        return DataToJson.dynamicDataGet(pieces);
      }
     public static String pieChartData(ArrayList<InfoPiece> records){
         // test continent
@@ -67,8 +67,8 @@ public class DataUtil {
         }
         CountryCase[] country_cases = new CountryCase[pieces.size()];
         DataReadEncapsulation.getCountryCases(pieces).toArray(country_cases);
-        System.out.println(DataGet.continentDataGet(country_cases));
-        return DataGet.continentDataGet(country_cases);
+        System.out.println(DataToJson.continentDataGet(country_cases));
+        return DataToJson.continentDataGet(country_cases);
     }
     public static String tableData(ArrayList<InfoPiece> records, String group, String order, Date date) throws NoSuchFieldException {
 
@@ -108,7 +108,7 @@ public class DataUtil {
                 return -1;
             }
         });
-        System.out.println(DataGet.tableDataGet(pieces));
-        return DataGet.tableDataGet(pieces);
+        System.out.println(DataToJson.tableDataGet(pieces));
+        return DataToJson.tableDataGet(pieces);
     }
 }

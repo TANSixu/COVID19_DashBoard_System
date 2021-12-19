@@ -23,12 +23,12 @@ public class InfoPiece {
         this.countryName = countryName;
         this.continent = continent;
         this.date = sdf.parse(date);
-        this.newCases = (long) Double.parseDouble(newCases);
-        this.totCases = (long) Double.parseDouble(totCases);
-        this.newDeaths = (long) Double.parseDouble(newDeaths);
-        this.totDeaths = (long) Double.parseDouble(totDeaths);
-        this.newVACs = (long) Double.parseDouble(newVACs);
-        this.totVACs = (long) Double.parseDouble(totVACs);
+        this.newCases = (long) translate(newCases);
+        this.totCases = (long) translate(totCases);
+        this.newDeaths = (long) translate(newDeaths);
+        this.totDeaths = (long) translate(totDeaths);
+        this.newVACs = (long) translate(newVACs);
+        this.totVACs = (long) translate(totVACs);
     }
 
     public InfoPiece(String countryCode, String countryName, String continent, Date date, long newCases, long totCases, long newDeaths, long totDeaths, long newVACs, long totVACs) {
@@ -44,6 +44,16 @@ public class InfoPiece {
         this.totVACs = totVACs;
     }
 
+
+    private double translate(String num){
+        double ans;
+        try {
+            ans = Double.parseDouble(num);
+        }catch (NumberFormatException ne){
+            ans = 0;
+        }
+        return ans;
+    }
     @Override
     public String toString() {
         return "InfoPiece{" +

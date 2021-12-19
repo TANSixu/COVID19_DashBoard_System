@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 
-public class DataGet {
+public class DataToJson {
     public static String continentDataGet(CountryCase[] country_cases) {
         //从数据库中找到每个国家最新的info 在完成 country_cases的实例
         Continent Asia = new Continent("Asia", 0);

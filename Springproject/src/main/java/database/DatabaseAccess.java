@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class DatabaseAccess {
     public static void main(String[] args) {
-        ArrayList<InfoPiece> ans = getAllRecords();
-        System.out.println("hahah");
+//        ArrayList<InfoPiece> ans = getAllRecords();
+//        System.out.println("hahah");
     }
 
     public static void insertPiece(InfoPiece piece) {
