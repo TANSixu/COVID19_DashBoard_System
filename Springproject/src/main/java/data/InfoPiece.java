@@ -5,9 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class InfoPiece {
-    public String CountryCode;
-    public String CountryName;
-    public String Continent;
+    public String countryCode;
+    public String countryName;
+    public String continent;
     public Date date;
     public Long newCases;
     public Long totCases;
@@ -19,9 +19,9 @@ public class InfoPiece {
 
     public InfoPiece(String countryCode, String countryName, String continent, String date, String newCases, String totCases, String newDeaths, String totDeaths, String newVACs, String totVACs) throws ParseException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        CountryCode = countryCode;
-        CountryName = countryName;
-        Continent = continent;
+        this.countryCode = countryCode;
+        this.countryName = countryName;
+        this.continent = continent;
         this.date = sdf.parse(date);
         this.newCases = (long) Double.parseDouble(newCases);
         this.totCases = (long) Double.parseDouble(totCases);
@@ -32,9 +32,9 @@ public class InfoPiece {
     }
 
     public InfoPiece(String countryCode, String countryName, String continent, Date date, long newCases, long totCases, long newDeaths, long totDeaths, long newVACs, long totVACs) {
-        this.CountryCode = countryCode;
-        CountryName = countryName;
-        Continent = continent;
+        this.countryCode = countryCode;
+        this.countryName = countryName;
+        this.continent = continent;
         this.date = date;
         this.newCases = newCases;
         this.totCases = totCases;
@@ -47,9 +47,9 @@ public class InfoPiece {
     @Override
     public String toString() {
         return "InfoPiece{" +
-                "CountryCode='" + CountryCode + '\'' +
-                ", CountryName='" + CountryName + '\'' +
-                ", Continent='" + Continent + '\'' +
+                "CountryCode='" + countryCode + '\'' +
+                ", CountryName='" + countryName + '\'' +
+                ", Continent='" + continent + '\'' +
                 ", date=" + date +
                 ", newCases=" + newCases +
                 ", totCases=" + totCases +
@@ -61,19 +61,19 @@ public class InfoPiece {
     }
 
     public String getCountryName() {
-        return CountryName;
+        return countryName;
     }
 
     public void setCountryName(String countryName) {
-        CountryName = countryName;
+        this.countryName = countryName;
     }
 
     public String getContinent() {
-        return Continent;
+        return continent;
     }
 
     public void setContinent(String continent) {
-        Continent = continent;
+        this.continent = continent;
     }
 
     public Date getDate() {

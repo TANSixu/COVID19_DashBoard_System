@@ -11,12 +11,12 @@ import java.util.stream.Stream;
 public class TestFileRead {
     static String fileName = "E:\\java2\\Springproject\\src\\main\\java\\owid-covid-data.csv";
 
-    public static ArrayList<InfoPiece> get_top10_records(ArrayList<InfoPiece> infoPieces) {
+    public static ArrayList<InfoPiece> getTop10Records(ArrayList<InfoPiece> infoPieces) {
         ArrayList<InfoPiece> pieces = new ArrayList<>();
         String[] countryNames = {"China", "United States", "Russia", "Japan", "South Korea", "Germany", "United Kingdom", "Brazil", "India", "South Africa"};
         for (int i = 0; i < infoPieces.size(); i++) {
             for (int j = 0; j < countryNames.length; j++) {
-                if (infoPieces.get(i).CountryName.equals(countryNames[j])) {
+                if (infoPieces.get(i).countryName.equals(countryNames[j])) {
                     pieces.add(infoPieces.get(i));
                     break;
                 }
@@ -26,17 +26,17 @@ public class TestFileRead {
         return pieces;
     }
 
-    public static ArrayList<CountryCase> get_country_cases(ArrayList<InfoPiece> infoPieces) {
+    public static ArrayList<CountryCase> getCountryCases(ArrayList<InfoPiece> infoPieces) {
         ArrayList<CountryCase> country_cases = new ArrayList<>();
         for (int i = 0; i < infoPieces.size(); i++) {
-            CountryCase country_case = new CountryCase(infoPieces.get(i).CountryName, infoPieces.get(i).totCases, infoPieces.get(i).Continent);
+            CountryCase country_case = new CountryCase(infoPieces.get(i).countryName, infoPieces.get(i).totCases, infoPieces.get(i).continent);
             country_cases.add(country_case);
         }
         return country_cases;
     }
 
-    public static Country get_Country(ArrayList<InfoPiece> infoPieces) {
-        Country country = new Country(infoPieces.get(0).CountryCode, infoPieces.get(0).CountryName, infoPieces.get(0).Continent);
+    public static Country getCountry(ArrayList<InfoPiece> infoPieces) {
+        Country country = new Country(infoPieces.get(0).countryCode, infoPieces.get(0).countryName, infoPieces.get(0).continent);
         country.infoList = infoPieces;
         return country;
     }
@@ -69,7 +69,7 @@ public class TestFileRead {
         return records;
     }
 
-    public static ArrayList<InfoPiece> read_from_dataset(){
+    public static ArrayList<InfoPiece> readFromDataset(){
         ArrayList<InfoPiece> records = new ArrayList<>();
 
         return records;

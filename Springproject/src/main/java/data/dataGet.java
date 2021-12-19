@@ -87,7 +87,7 @@ public class DataGet {
         ArrayList<DynamicData> dynamicDataArrayList = new ArrayList<>();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         records.forEach(infoPiece -> {
-            DynamicData dynamicData = new DynamicData(simpleDateFormat.format(infoPiece.date), infoPiece.CountryName, infoPiece.totCases);
+            DynamicData dynamicData = new DynamicData(simpleDateFormat.format(infoPiece.date), infoPiece.countryName, infoPiece.totCases);
             dynamicDataArrayList.add(dynamicData);
         });
 
@@ -110,8 +110,8 @@ public class DataGet {
     public static String tableDataGet(ArrayList<InfoPiece> records) {
         //从数据库把所有的info 全部选出
         for (int i = 0; i < records.size(); i++) {
-            records.get(i).Continent = null;
-            records.get(i).CountryCode = null;
+            records.get(i).continent = null;
+            records.get(i).countryCode = null;
             records.get(i).date = null;
         }
         Gson gson = new Gson();
