@@ -13,7 +13,7 @@ import java.util.Comparator;
 import java.util.Date;
 
 @SuppressWarnings("ALL")
-public class test {
+public class DataUtil {
     public static void main(String[] args) throws ParseException, NoSuchFieldException {
         ArrayList<InfoPiece> records = DatabaseAccess.getAllRecords();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -22,9 +22,9 @@ public class test {
 //        test_dynamicData(records);
 //        test_map(records);
 //        test_continent(records);
-          test_table(records,"newCases","-1",date);
+          tableData(records,"newCases","-1",date);
     }
-    public static String test_map (ArrayList<InfoPiece> records){
+    public static String mapChartData(ArrayList<InfoPiece> records){
         Date date= records.get(records.size()-1).date;
         ArrayList<InfoPiece> pieces = new ArrayList<>();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -38,7 +38,7 @@ public class test {
         System.out.println(DataGet.mapDataGet(country_cases));
         return DataGet.mapDataGet(country_cases);
     }
-    public static String test_Country(ArrayList<InfoPiece> records,String CountryName,Date date) throws ParseException {
+    public static String lineChartData(ArrayList<InfoPiece> records, String CountryName, Date date) throws ParseException {
        ArrayList<InfoPiece> pieces = new ArrayList<>();
         for (int i = 0; i <records.size() ; i++) {
             if(records.get(i).countryName.equals(CountryName)){
@@ -50,12 +50,12 @@ public class test {
         System.out.println(DataGet.countryDataGet(country,date));
         return DataGet.countryDataGet(country,date);
     }
-    public static String test_dynamicData(ArrayList<InfoPiece> records){
+    public static String animaData(ArrayList<InfoPiece> records){
         ArrayList<InfoPiece> pieces = TestFileRead.getTop10Records(records);
         System.out.println(DataGet.dynamicDataGet(pieces));
         return DataGet.dynamicDataGet(pieces);
      }
-    public static String test_continent( ArrayList<InfoPiece> records){
+    public static String pieChartData(ArrayList<InfoPiece> records){
         // test continent
         Date date= records.get(records.size()-1).date;
         ArrayList<InfoPiece> pieces = new ArrayList<>();
@@ -70,7 +70,7 @@ public class test {
         System.out.println(DataGet.continentDataGet(country_cases));
         return DataGet.continentDataGet(country_cases);
     }
-    public static String test_table(ArrayList<InfoPiece> records, String group, String order,Date date) throws NoSuchFieldException {
+    public static String tableData(ArrayList<InfoPiece> records, String group, String order, Date date) throws NoSuchFieldException {
 
         ArrayList<InfoPiece> pieces = new ArrayList<>();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
