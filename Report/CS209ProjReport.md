@@ -205,6 +205,6 @@ With web crawler, the most up-to-date data can be retrieved. This figure present
 
 ### Ⅳ Acknowledgement
 Thanks all the team members, they stayed up late for a whole weekend to finish this fancy project.
-Thanks Meeting room 804B in College of Engineering, where combated the codes.
+Thanks Meeting room 804B in College of Engineering, where we combated the codes.
 
    

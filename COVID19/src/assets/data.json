@@ -1,0 +1,13 @@
+[
+  [
+    "Country",
+    "Year",
+    "Month",
+    "Day",
+    "Weekday",
+    "DateTime",
+    "TotalCase",
+    "Deaths",
+    "VACs"
+  ]
+]
