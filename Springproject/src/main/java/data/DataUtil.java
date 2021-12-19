@@ -34,7 +34,7 @@ public class DataUtil {
             }
         }
         CountryCase[] country_cases = new CountryCase[pieces.size()];
-        TestFileRead.getCountryCases(pieces).toArray(country_cases);
+        DataReadEncapsulation.getCountryCases(pieces).toArray(country_cases);
         System.out.println(DataGet.mapDataGet(country_cases));
         return DataGet.mapDataGet(country_cases);
     }
@@ -46,12 +46,12 @@ public class DataUtil {
             }
         }
 
-        Country country = TestFileRead.getCountry(pieces);
+        Country country = DataReadEncapsulation.getCountry(pieces);
         System.out.println(DataGet.countryDataGet(country,date));
         return DataGet.countryDataGet(country,date);
     }
     public static String animaData(ArrayList<InfoPiece> records){
-        ArrayList<InfoPiece> pieces = TestFileRead.getTop10Records(records);
+        ArrayList<InfoPiece> pieces = DataReadEncapsulation.getTop10Records(records);
         System.out.println(DataGet.dynamicDataGet(pieces));
         return DataGet.dynamicDataGet(pieces);
      }
@@ -66,7 +66,7 @@ public class DataUtil {
             }
         }
         CountryCase[] country_cases = new CountryCase[pieces.size()];
-        TestFileRead.getCountryCases(pieces).toArray(country_cases);
+        DataReadEncapsulation.getCountryCases(pieces).toArray(country_cases);
         System.out.println(DataGet.continentDataGet(country_cases));
         return DataGet.continentDataGet(country_cases);
     }

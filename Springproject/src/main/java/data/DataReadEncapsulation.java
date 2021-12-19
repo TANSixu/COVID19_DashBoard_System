@@ -8,8 +8,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
-public class TestFileRead {
-    static String fileName = "E:\\java2\\Springproject\\src\\main\\java\\owid-covid-data.csv";
+public class DataReadEncapsulation {
+    static String fileName;
 
     public static ArrayList<InfoPiece> getTop10Records(ArrayList<InfoPiece> infoPieces) {
         ArrayList<InfoPiece> pieces = new ArrayList<>();
