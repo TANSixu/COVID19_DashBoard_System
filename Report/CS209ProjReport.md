@@ -1,10 +1,11 @@
 # CS209 Project Report
 ## COVID19_DashBoard
 
+##### 11911109 张倚凡, 11910216 王标, 11911627 谈思序
 ----
 ### Ⅰ. Brief introduction
 In this project, we built a simple but useful covid19 data visulization web-app, which contains both frontend and backend. Components and techniques utilized are as follows:
-* Frontend: Vue
+* Frontend: Vue, webpack
 * Backend: Springboot
 * Database: PostgreSQL
 * Data source: https://www.worldometers.info/coronavirus/ (Daily update), owid-covid-data.csv(Historcal data)
@@ -24,7 +25,7 @@ This *DashBoard* currently has the following functions:
 3. Support **4 methods of visulization**, including **world map**, line charts, dynamic charts, pie charts. With the well-designed backend and frontend, the visulization methods is scalable, which means user can cumstomize the charts with ease.
 4. Automatically track the latest covid19 data using **web crawler**.
 5. Support **search** and **sort** functions to display table-view.
-6. Support **data export** to csv and **image export**.
+6. Support **data export** to json and **image export**.
 7. **Flexible parameters** can be set to display the data.
 8. Support **animation** visulization.
 
@@ -176,7 +177,34 @@ public static ArrayList<InfoPiece> getAllRecords(){}
 
 
 ### Ⅲ. Demonstration
+#### Table-view with search and sort function
+![table](./figs/table.jpg "Magic table")
+As shown, search and sort can be invoked using the floating selector on the right side.
+
+#### Line-chart
+![Line](./figs/line.png "Magic line")
+Line charts shows the new cases, deaths or VAcs of a selected Country in the last 7 days from ceitain day.
+
+#### Pie-chart
+![pie](./figs/pie.jpg "Magic pie")
+Pie charts presents the COVID19 situation among all continents.
+
+#### World Map
+![map](./figs/map.jpg "map")
+Map shows total cases of a certain country all around the world.
+
+#### Trend Animation
+![dynamic](./figs/dynamic.jpg "dynamic")
+This dynamic animation figure shows the total cases of 10 countries.
+
+#### Realtime database
+![map](./figs/crawler.png "map")
+With web crawler, the most up-to-date data can be retrieved. This figure presents part of data scraped from the internet.
 
 
+
+### Ⅳ Acknowledgement
+Thanks all the team members, they stayed up late for a whole weekend to finish this fancy project.
+Thanks Meeting room 804B in College of Engineering, where combated the codes.
 
    
