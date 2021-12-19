@@ -1,10 +1,7 @@
 package data;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -29,10 +26,10 @@ public class TestFileRead {
         return pieces;
     }
 
-    public static ArrayList<country_case> get_country_cases(ArrayList<InfoPiece> infoPieces) {
-        ArrayList<country_case> country_cases = new ArrayList<>();
+    public static ArrayList<CountryCase> get_country_cases(ArrayList<InfoPiece> infoPieces) {
+        ArrayList<CountryCase> country_cases = new ArrayList<>();
         for (int i = 0; i < infoPieces.size(); i++) {
-            country_case country_case = new country_case(infoPieces.get(i).CountryName, infoPieces.get(i).totCases, infoPieces.get(i).Continent);
+            CountryCase country_case = new CountryCase(infoPieces.get(i).CountryName, infoPieces.get(i).totCases, infoPieces.get(i).Continent);
             country_cases.add(country_case);
         }
         return country_cases;

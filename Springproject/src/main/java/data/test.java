@@ -1,18 +1,12 @@
 package data;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
-import database.DatabaseAccess;
 
 @SuppressWarnings("ALL")
 public class test {
@@ -36,10 +30,10 @@ public class test {
                 pieces.add(records.get(i));
             }
         }
-        country_case[] country_cases = new country_case[pieces.size()];
+        CountryCase[] country_cases = new CountryCase[pieces.size()];
         TestFileRead.get_country_cases(pieces).toArray(country_cases);
-        System.out.println(dataGet.map_data_get(country_cases));
-        return dataGet.map_data_get(country_cases);
+        System.out.println(DataGet.map_data_get(country_cases));
+        return DataGet.map_data_get(country_cases);
     }
     public static String test_Country(ArrayList<InfoPiece> records,String CountryName,Date date) throws ParseException {
        ArrayList<InfoPiece> pieces = new ArrayList<>();
@@ -50,13 +44,13 @@ public class test {
         }
 
         Country country = TestFileRead.get_Country(pieces);
-        System.out.println(dataGet.country_data_get(country,date));
-        return dataGet.country_data_get(country,date);
+        System.out.println(DataGet.country_data_get(country,date));
+        return DataGet.country_data_get(country,date);
     }
     public static String test_dynamicData(ArrayList<InfoPiece> records){
         ArrayList<InfoPiece> pieces = TestFileRead.get_top10_records(records);
-        System.out.println(dataGet.dynamicData_get(pieces));
-        return dataGet.dynamicData_get(pieces);
+        System.out.println(DataGet.dynamicData_get(pieces));
+        return DataGet.dynamicData_get(pieces);
      }
     public static String test_continent( ArrayList<InfoPiece> records){
         // test continent
@@ -68,10 +62,10 @@ public class test {
                 pieces.add(records.get(i));
             }
         }
-        country_case[] country_cases = new country_case[pieces.size()];
+        CountryCase[] country_cases = new CountryCase[pieces.size()];
         TestFileRead.get_country_cases(pieces).toArray(country_cases);
-        System.out.println(dataGet.continent_data_get(country_cases));
-        return dataGet.continent_data_get(country_cases);
+        System.out.println(DataGet.continentDataGet(country_cases));
+        return DataGet.continentDataGet(country_cases);
     }
     public static String test_table(ArrayList<InfoPiece> records, String group, String order,Date date) throws NoSuchFieldException {
 
@@ -101,7 +95,7 @@ public class test {
                 return a.compareTo(b)*Order;
             }
         });
-        System.out.println(dataGet.table_data_get(pieces));
-        return dataGet.table_data_get(pieces);
+        System.out.println(DataGet.table_data_get(pieces));
+        return DataGet.table_data_get(pieces);
     }
 }

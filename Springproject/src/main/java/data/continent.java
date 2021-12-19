@@ -1,10 +1,10 @@
 package data;
 
-public class continent {
+public class Continent {
     String name;
     long value;
 
-    public continent(String name, int value) {
+    public Continent(String name, int value) {
         this.name = name;
         this.value = value;
     }

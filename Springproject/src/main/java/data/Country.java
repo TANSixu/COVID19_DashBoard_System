@@ -19,32 +19,34 @@ public class Country {
         infoList = new ArrayList<>();
     }
 
-    public int getTotal_cases() {
+    public int getTotalCases() {
         return total_cases;
     }
 
-    public void setTotal_cases(int total_cases) {
+    public void setTotalCases(int total_cases) {
         this.total_cases = total_cases;
     }
 
-    public int getTotal_deaths() {
+    public int getTotalDeaths() {
         return total_deaths;
     }
 
-    public void setTotal_deaths(int total_deaths) {
+    public void setTotalDeaths(int total_deaths) {
         this.total_deaths = total_deaths;
     }
 
-    public int getTotal_Vacs() {
+    public int getTotalVacs() {
         return total_Vacs;
     }
 
-    public void setTotal_Vacs(int total_Vacs) {
+    public void setTotalVacs(int total_Vacs) {
         this.total_Vacs = total_Vacs;
     }
-    public void add_info(InfoPiece infoPiece){
+
+    public void addInfo(InfoPiece infoPiece) {
         infoList.add(infoPiece);
     }
+
     public String getCountryCode() {
         return CountryCode;
     }

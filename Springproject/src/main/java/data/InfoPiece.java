@@ -5,16 +5,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class InfoPiece {
-     public  String CountryCode;
-     public  String CountryName;
-     public  String Continent;
-     public  Date date;
-     public  Long newCases;
-     public  Long totCases;
-     public  Long newDeaths;
-     public  Long totDeaths;
-     public  Long newVACs;
-     public  Long totVACs;
+    public String CountryCode;
+    public String CountryName;
+    public String Continent;
+    public Date date;
+    public Long newCases;
+    public Long totCases;
+    public Long newDeaths;
+    public Long totDeaths;
+    public Long newVACs;
+    public Long totVACs;
 
 
     public InfoPiece(String countryCode, String countryName, String continent, String date, String newCases, String totCases, String newDeaths, String totDeaths, String newVACs, String totVACs) throws ParseException {
@@ -23,10 +23,10 @@ public class InfoPiece {
         CountryName = countryName;
         Continent = continent;
         this.date = sdf.parse(date);
-        this.newCases =(long) Double.parseDouble(newCases);
-        this.totCases =(long) Double.parseDouble(totCases);
-        this.newDeaths =(long) Double.parseDouble(newDeaths);
-        this.totDeaths =(long) Double.parseDouble (totDeaths);
+        this.newCases = (long) Double.parseDouble(newCases);
+        this.totCases = (long) Double.parseDouble(totCases);
+        this.newDeaths = (long) Double.parseDouble(newDeaths);
+        this.totDeaths = (long) Double.parseDouble(totDeaths);
         this.newVACs = (long) Double.parseDouble(newVACs);
         this.totVACs = (long) Double.parseDouble(totVACs);
     }
