@@ -28,32 +28,32 @@ This *DashBoard* currently has the following functions:
 8. Support **animation** visulization.
 
 ## Ⅱ. Examples
-#### Table-view with search and sort function
+### Table-view with search and sort function
 ![table](./Report/figs/table.jpg "Magic table")
 As shown, search and sort can be invoked using the floating selector on the right side.
 
-#### Line-chart
+### Line-chart
 ![Line](./Report/figs/line.png "Magic line")
 Line charts shows the new cases, deaths or VAcs of a selected Country in the last 7 days from ceitain day.
 
-#### Pie-chart
+### Pie-chart
 ![pie](./Report/figs/pie.jpg "Magic pie")
 Pie charts presents the COVID19 situation among all continents.
 
-#### World Map
+### World Map
 ![map](./Report/figs/map.jpg "map")
 Map shows total cases of a certain country all around the world.
 
-#### Trend Animation
+### Trend Animation
 ![dynamic](./Report/figs/dynamic.jpg "dynamic")
 This dynamic animation figure shows the total cases of 10 countries.
 
-#### Realtime database
+### Realtime database
 ![map](./Report/figs/crawler.png "map")
 With web crawler, the most up-to-date data can be retrieved. This figure presents part of data scraped from the internet.
 
 
 
-### Ⅳ Acknowledgement
+## Ⅳ Acknowledgement
 Thanks all the team members, they stayed up late for a whole weekend to finish this fancy project.
 Thanks Meeting room 804B in College of Engineering, where we combated the codes.
