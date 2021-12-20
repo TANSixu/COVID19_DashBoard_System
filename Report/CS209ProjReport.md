@@ -29,7 +29,92 @@ This *DashBoard* currently has the following functions:
 7. **Flexible parameters** can be set to display the data.
 8. Support **animation** visulization.
 
-### Class Methods and Fields
+
+#### File structure
+Main file structure is shown as follows.
+```bash
+├─COVID19
+│  ├─src
+│  │  │  App.vue
+│  │  │  index.ts
+│  │  │  main.js
+│  │  │  
+│  │  ├─assets
+│  │  │      custom.geo.json
+│  │  │      data.json
+│  │  │      jquery-migrate-3.3.2.js
+│  │  │      life-expectation-table.json
+│  │  │      logo.png
+│  │  │      medium.geo.json
+│  │  │      world.json
+│  │  │      world_en.json
+│  │  │      
+│  │  ├─components
+│  │  │      DynamicTrend.vue
+│  │  │      FileSaver.js
+│  │  │      LineChart.vue
+│  │  │      PieChart.vue
+│  │  │      Table.vue
+│  │  │      WeeklyTrend.vue
+│  │  │      world.json
+│  │  │      WorldMap.vue
+│  │  │      
+│  │  └─router
+│  │          index.js 
+└─Springproject   
+    ├─src
+    │  ├─main
+    │  │  ├─java
+    │  │  │  │  owid-covid-data.csv
+    │  │  │  │  
+    │  │  │  ├─com
+    │  │  │  │  └─example
+    │  │  │  │      └─demo
+    │  │  │  │          │  SpringprojectApplication.java
+    │  │  │  │          │  
+    │  │  │  │          ├─config
+    │  │  │  │          │      CorsConfig.java
+    │  │  │  │          │      
+    │  │  │  │          ├─controller
+    │  │  │  │          ├─entity
+    │  │  │  │          └─web
+    │  │  │  │                  dataProess.java
+    │  │  │  │                  HelloTest.java
+    │  │  │  │                  
+    │  │  │  ├─config
+    │  │  │  │      Config.java
+    │  │  │  │      
+    │  │  │  ├─data
+    │  │  │  │      Continent.java
+    │  │  │  │      Country.java
+    │  │  │  │      CountryCase.java
+    │  │  │  │      CountryData.java
+    │  │  │  │      DataReadEncapsulation.java
+    │  │  │  │      DataToJson.java
+    │  │  │  │      DataUtil.java
+    │  │  │  │      DynamicData.java
+    │  │  │  │      InfoPiece.java
+    │  │  │  │      
+    │  │  │  └─database
+    │  │  │          Crawler.java
+    │  │  │          DatabaseAccess.java
+    │  │  │          SQLDataSource.java
+    │  │  │          
+    │  │  └─resources
+    │  │      │  application.properties
+    │  │      │  config.properties
+    │  │      │  
+    │  │      ├─static
+    │  │      └─templates
+    │  └─test
+    │      └─java
+    │          └─com
+    │              └─example
+    │                  └─demo
+    │                          SpringprojectApplicationTests.java
+```
+
+### Ⅱ Class Methods and Fields
 
 #### Data structure
 

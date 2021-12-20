@@ -22,7 +22,7 @@ export default {
       /**/
       let namemap = worldMapEn.namemap
       let dataArr
-      axios.get("http://10.26.144.47:8080/data/map")
+      axios.get("http://localhost:8888/data/map")
       .then(response => {
         dataArr = response.data
         this.drawChart(namemap, dataArr)

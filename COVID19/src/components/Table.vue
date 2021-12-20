@@ -205,7 +205,7 @@ export default {
     },
     changeOption(date, group, order) {
       axios.get(
-        "http://10.26.144.47:8080/data/table",
+        "http://localhost:8888/data/table",
         {
           params: {
             date: date,
@@ -220,7 +220,7 @@ export default {
         this.data1 = []
         for (let i = 0; i < data.length; i++) {
           this.data1.push({
-            countryName: data[i].CountryName,
+            countryName: data[i].countryName,
             totCases: data[i].totCases,
             totDeaths: data[i].totDeaths,
             totVACs: data[i].totVACs,

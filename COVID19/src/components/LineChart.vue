@@ -240,7 +240,7 @@ export default {
       this.changeOption(country, `${year}-${month}-${day}`)
     },
     changeOption(country, date) {
-      axios.get("http://10.26.144.47:8080/data/country",
+      axios.get("http://localhost:8888/data/country",
       {
         params: {
           countryName: country,

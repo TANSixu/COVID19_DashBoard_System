@@ -55,7 +55,7 @@ export default {
     if (chart == null) {
       chart = echarts.init(document.getElementById('pie-chart'))
     }
-    axios.get("http://10.26.144.47:8080/data/continent")
+    axios.get("http://localhost:8888/data/continent")
     .then(response => {
       let data = response.data
       console.log(`data = ${data}`)

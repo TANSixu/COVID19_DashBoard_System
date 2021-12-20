@@ -53,7 +53,7 @@ export default {
     }
     axios.all([
       axios.get("https://cdn.jsdelivr.net/npm/emoji-flags@1.3.0/data.json"),
-      axios.get("http://10.26.144.47:8080/data/dynamic")]
+      axios.get("http://localhost:8888/data/dynamic")]
     ).then(axios.spread(function (res0, res1) {
       const flags = res0.data
       let temp = res1.data
