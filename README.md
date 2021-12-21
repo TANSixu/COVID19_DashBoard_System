@@ -1,5 +1,6 @@
 # COVID19_DashBoard_System
 This is a project for CS209 at SUSTECH.
+Team member: Yifan Zhang, Biao Wang, Sixu Tan
 
 ## Ⅰ. Brief introduction
 In this project, we built a simple but useful covid19 data visulization web-app, which contains both frontend and backend. Components and techniques utilized are as follows:
